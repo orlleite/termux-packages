@@ -48,7 +48,7 @@ termux_step_post_make_install () {
 	cd $TERMUX_PREFIX/var/service
 	mkdir -p ftpd telnetd
 	echo '#!/bin/sh' > ftpd/run
-	echo 'exec tcpsvd -vE 0.0.0.0 8021 ftpd /data/data/com.termux/files/home' >> ftpd/run
+	echo 'exec tcpsvd -vE 0.0.0.0 8021 ftpd /data/data/com.webdefault.corks/files/home' >> ftpd/run
 	echo '#!/bin/sh' > telnetd/run
 	echo 'exec telnetd -F' >> telnetd/run
 	chmod +x */run
